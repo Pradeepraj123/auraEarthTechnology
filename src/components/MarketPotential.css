@@ -19,9 +19,10 @@
   padding: 32px 30px;
 }
 
-.market-compare__col--vaandigo {
-  background: var(--gradient-yellow);
+.market-compare__col--vandigo {
+  background: var(--gradient-yellow, linear-gradient(135deg, #FFE372 0%, #F4C430 50%, #F2A900 100%));
   border-color: transparent;
+  box-shadow: 0 12px 30px -12px rgba(244, 196, 48, 0.55);
 }
 
 .market-compare__title {
@@ -36,7 +37,7 @@
   margin-bottom: 22px;
 }
 
-.market-compare__col--vaandigo .market-compare__subtitle {
+.market-compare__col--vandigo .market-compare__subtitle {
   color: var(--color-black);
   opacity: 0.75;
 }
