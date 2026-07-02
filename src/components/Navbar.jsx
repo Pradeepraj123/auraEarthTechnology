@@ -29,7 +29,7 @@ export default function Navbar() {
         <a href="#top" className="navbar__logo">
           <span className="navbar__logo-mark">A</span>
           <span className="navbar__logo-text">
-            Aura Earth <span>Technology</span>
+            VandiGo <span></span>
           </span>
         </a>
 
