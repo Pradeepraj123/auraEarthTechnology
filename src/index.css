@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Colors */
+  --color-yellow: #F4C430;
+  --color-yellow-light: #FFD84D;
+  --color-yellow-deep: #D9A600;
+  --color-black: #0B0B0C;
+  --color-charcoal: #17171A;
+  --color-gray-900: #1C1C1E;
+  --color-gray-800: #2A2A2D;
+  --color-gray-600: #58585C;
+  --color-gray-400: #8A8A8E;
+  --color-gray-200: #E4E4E2;
+  --color-gray-100: #F2F1EC;
+  --color-white: #FFFFFF;
+  --color-off-white: #FAFAF8;
+
+  /* Gradients */
+  --gradient-yellow: linear-gradient(135deg, var(--color-yellow-light) 0%, var(--color-yellow) 55%, var(--color-yellow-deep) 100%);
+  --gradient-dark: linear-gradient(180deg, var(--color-black) 0%, var(--color-charcoal) 100%);
+
+  /* Type */
+  --font-main: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Shadows */
+  --shadow-soft: 0 10px 30px -12px rgba(0, 0, 0, 0.18);
+  --shadow-strong: 0 20px 50px -15px rgba(0, 0, 0, 0.35);
+  --shadow-yellow: 0 12px 32px -10px rgba(244, 196, 48, 0.45);
+
+  /* Layout */
+  --container-width: 1240px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-full: 999px;
+
+  color-scheme: light;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-off-white);
+  color: var(--color-gray-900);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-yellow-deep);
+  margin-bottom: 16px;
+}
+
+.eyebrow::before {
+  content: '';
+  width: 22px;
+  height: 2px;
+  background: var(--color-yellow);
+  border-radius: 2px;
+}
+
+.section-heading {
+  font-size: clamp(30px, 4vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
+.section-sub {
+  font-size: 17px;
+  color: var(--color-gray-600);
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+.section-head {
+  margin-bottom: 56px;
+}
+
+.section-head.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-head.center .section-sub {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--gradient-yellow);
+  color: var(--color-black);
+  box-shadow: var(--shadow-yellow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 40px -10px rgba(244, 196, 48, 0.55);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--color-white);
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-yellow);
+  color: var(--color-yellow);
+  transform: translateY(-3px);
+}
+
+.btn-dark {
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+.btn-dark:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-strong);
+}
+
+section {
+  position: relative;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+::selection {
+  background: var(--color-yellow);
+  color: var(--color-black);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-yellow-deep);
+  outline-offset: 3px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}

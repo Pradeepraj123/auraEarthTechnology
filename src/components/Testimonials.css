@@ -1,0 +1,128 @@
+.testimonials {
+  background: var(--color-off-white);
+  padding: 120px 0;
+}
+
+.testimonials__road {
+  position: relative;
+  height: 64px;
+  margin: 0 auto 56px;
+  max-width: 640px;
+  border-top: 2px dashed var(--color-gray-200);
+}
+
+.testimonials__vehicle {
+  position: absolute;
+  top: -10px;
+  width: 40px;
+  height: 40px;
+  animation: testimonialsDrive 9s linear infinite;
+}
+
+.testimonials__vehicle--bike {
+  animation-delay: 3s;
+}
+
+.testimonials__vehicle--cab {
+  animation-delay: 6s;
+}
+
+@keyframes testimonialsDrive {
+  0% {
+    left: -44px;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .testimonials__vehicle {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+.testimonials__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+}
+
+.testimonial-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: 34px 28px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+}
+
+.testimonial-card__quote-mark {
+  font-size: 46px;
+  font-weight: 800;
+  color: var(--color-yellow);
+  line-height: 1;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.testimonial-card blockquote {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-gray-800);
+  margin-bottom: 26px;
+}
+
+.testimonial-card figcaption {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-card__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--gradient-yellow);
+  color: var(--color-black);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.testimonial-card__name {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 600;
+}
+
+.testimonial-card__role {
+  display: block;
+  font-size: 13px;
+  color: var(--color-gray-600);
+}
+
+@media (max-width: 900px) {
+  .testimonials {
+    padding: 90px 0;
+  }
+
+  .testimonials__grid {
+    grid-template-columns: 1fr;
+  }
+}

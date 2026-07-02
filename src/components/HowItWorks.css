@@ -1,0 +1,166 @@
+.how {
+  background: var(--color-off-white);
+  padding: 120px 0;
+}
+
+.how__road {
+  position: relative;
+  height: 64px;
+  margin: 0 auto 56px;
+  max-width: 640px;
+  border-top: 2px dashed var(--color-gray-200);
+}
+
+.how__vehicle {
+  position: absolute;
+  top: -10px;
+  width: 40px;
+  height: 40px;
+}
+
+.how__vehicle--auto {
+  animation: driveAcross 9s linear infinite;
+}
+
+.how__vehicle--bike {
+  animation: driveAcross 9s linear infinite;
+  animation-delay: 3s;
+}
+
+.how__vehicle--cab {
+  animation: driveAcross 9s linear infinite;
+  animation-delay: 6s;
+}
+
+@keyframes driveAcross {
+  0% {
+    left: -44px;
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  92% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .how__vehicle {
+    animation: none;
+    opacity: 0;
+  }
+}
+
+.how__timeline {
+  position: relative;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.how__line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(244, 196, 48, 0.1), rgba(244, 196, 48, 0.6), rgba(244, 196, 48, 0.1));
+  transform: translateX(-50%);
+}
+
+.how__step {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-bottom: 46px;
+}
+
+.how__step:last-child {
+  margin-bottom: 0;
+}
+
+.how__step--left {
+  justify-content: flex-start;
+}
+
+.how__step--right {
+  justify-content: flex-end;
+}
+
+.how__step-card {
+  width: calc(50% - 46px);
+  background: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--radius-md);
+  padding: 26px 26px;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.3s ease;
+}
+
+.how__step-card:hover {
+  transform: translateY(-4px);
+}
+
+.how__step-num {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-yellow-deep);
+  letter-spacing: 0.06em;
+  margin-bottom: 10px;
+}
+
+.how__step-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.how__step-card p {
+  font-size: 14.5px;
+  color: var(--color-gray-600);
+  line-height: 1.6;
+}
+
+.how__step-dot {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gradient-yellow);
+  border: 4px solid var(--color-off-white);
+  transform: translateX(-50%);
+  box-shadow: var(--shadow-yellow);
+}
+
+@media (max-width: 760px) {
+  .how {
+    padding: 90px 0;
+  }
+
+  .how__line {
+    left: 8px;
+  }
+
+  .how__step,
+  .how__step--left,
+  .how__step--right {
+    justify-content: flex-start;
+    padding-left: 34px;
+  }
+
+  .how__step-card {
+    width: 100%;
+  }
+
+  .how__step-dot {
+    left: 8px;
+  }
+}
