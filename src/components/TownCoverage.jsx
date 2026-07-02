@@ -33,7 +33,7 @@ export default function TownCoverage() {
       <div className="container reveal" ref={ref}>
         <div className="section-head center">
           <p className="eyebrow" style={{ justifyContent: 'center' }}>Where we ride</p>
-          <h2 className="section-heading">Is VaandiGo in your town?</h2>
+          <h2 className="section-heading">Is VandiGo in your town?</h2>
           <p className="section-sub">
             We're adding new towns every month. Check yours, or tell us
             where you'd like us to go next.

@@ -8,7 +8,7 @@ const OTHERS = [
   'Ignoring 70%+ of India',
 ];
 
-const VAANDIGO = [
+const VANDIGO = [
   'Less Competition',
   'Low Marketing Cost',
   'High Profit Margins',
@@ -55,11 +55,11 @@ export default function MarketPotential() {
 
           <div className="market-compare__vs" aria-hidden="true">VS</div>
 
-          <div className="market-compare__col market-compare__col--vaandigo reveal">
-            <h3 className="market-compare__title">What VaandiGo Does</h3>
+          <div className="market-compare__col market-compare__col--vandigo reveal">
+            <h3 className="market-compare__title">What VandiGo Does</h3>
             <p className="market-compare__subtitle">Prioritizing small towns</p>
             <ul className="market-compare__list">
-              {VAANDIGO.map((item) => (
+              {VANDIGO.map((item) => (
                 <li key={item} className="market-compare__item market-compare__item--yes">
                   <span className="market-compare__mark" aria-hidden="true">&#10003;</span>
                   {item}
@@ -93,7 +93,7 @@ export default function MarketPotential() {
           <p className="market-closing__line">
             We don't ignore small towns. We build the future with them.
           </p>
-          <p className="market-closing__tag">VaandiGo &mdash; For Every Town. For Every You.</p>
+          <p className="market-closing__tag">VandiGo &mdash; For Every Town. For Every You.</p>
         </div>
       </div>
     </section>
