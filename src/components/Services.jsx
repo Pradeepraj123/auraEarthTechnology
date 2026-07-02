@@ -1,5 +1,6 @@
 import useReveal from '../hooks/useReveal';
 import './Services.css';
+import MarketPotential from './MarketPotential';
 
 const SERVICES = [
   {
@@ -57,36 +58,40 @@ export default function Services() {
   const ref = useReveal();
 
   return (
-    <section id="services" className="services">
-      <div className="container reveal" ref={ref}>
-        <div className="section-head center">
-          <p className="eyebrow" style={{ justifyContent: 'center' }}>What we offer</p>
-          <h2 className="section-heading">Every ride you need, in one app</h2>
-          <p className="section-sub">
-            From a quick auto hop to a cross-city cab ride, Aura Earth covers
-            the full spectrum of urban mobility &mdash; backed by safety tech
-            that runs quietly in the background of every trip.
-          </p>
-        </div>
+    <>
+      <section id="services" className="services">
+        <div className="container reveal" ref={ref}>
+          <div className="section-head center">
+            <p className="eyebrow" style={{ justifyContent: 'center' }}>What we offer</p>
+            <h2 className="section-heading">Every ride you need, in one app</h2>
+            <p className="section-sub">
+              From a quick auto hop to a cross-city cab ride, Aura Earth covers
+              the full spectrum of urban mobility &mdash; backed by safety tech
+              that runs quietly in the background of every trip.
+            </p>
+          </div>
 
-        <div className="services__grid">
-          {SERVICES.map((service, i) => (
-            <article
-              className="service-card reveal"
-              key={service.title}
-              style={{ transitionDelay: `${i * 70}ms` }}
-            >
-              <div className="service-card__icon">
-                <svg viewBox="0 0 40 40" fill="none" stroke="currentColor">
-                  {service.icon}
-                </svg>
-              </div>
-              <h3>{service.title}</h3>
-              <p>{service.text}</p>
-            </article>
-          ))}
+          <div className="services__grid">
+            {SERVICES.map((service, i) => (
+              <article
+                className="service-card reveal"
+                key={service.title}
+                style={{ transitionDelay: `${i * 70}ms` }}
+              >
+                <div className="service-card__icon">
+                  <svg viewBox="0 0 40 40" fill="none" stroke="currentColor">
+                    {service.icon}
+                  </svg>
+                </div>
+                <h3>{service.title}</h3>
+                <p>{service.text}</p>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <MarketPotential />
+    </>
   );
 }
