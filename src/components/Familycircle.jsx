@@ -1,6 +1,7 @@
 import useReveal from '../hooks/useReveal';
 import './FamilyCircle.css';
 
+
 const CIRCLE_STEPS = [
   { title: 'Add trusted contacts', text: 'Save family or friends as your emergency circle, right from your profile.' },
   { title: 'Auto-share on every ride', text: 'Your live trip link goes out to your circle the moment a ride starts.' },
