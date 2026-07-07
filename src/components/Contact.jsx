@@ -24,11 +24,11 @@ export default function Contact() {
           </div>
           <div>
             <span className="contact__info-label">Phone</span>
-            <span className="contact__info-value">+91 9976123417</span>
+            <span className="contact__info-value">+91 8973778777</span>
           </div>
           <div>
             <span className="contact__info-label">Headquarters</span>
-            <span className="contact__info-value">Aundipatty, Theni, India</span>
+            <span className="contact__info-value">India , TamilNadu</span>
           </div>
         </div>
       </div>
